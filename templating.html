@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar alpinejs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- <div
+      x-data="{nama:'My Lord', angka:2, url : '<a href=\'https://www.google.com/\'>Lord</a>'}"
+      class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow" -->
+    <!-- > -->
+      <!-- <h1  class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm">
+            Hello <span x-text="angka"></span> adalah bilangan: <span x-text="angka % 2 === 0 ? 'Genap' : 'Ganjil'"></span>
+        </h1> -->
+
+      <!-- <h1  class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm">
+            Hello <span x-html="url"></span>
+        </h1> -->
+    <!-- </div> -->
+
+    <div
+      x-data="{open: false}"
+      class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+      <!-- <button @click="open = !open" x-text="open ? 'Close' : 'Open'" class="py-2 px-5 bg-slate-600 text-white rounded-md">Open</button>
+      <div x-show="open" class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </div> -->
+
+      <button @click="open = !open" x-text="open ? 'Close' : 'Open'" class="py-2 px-5 bg-slate-600 text-white rounded-md">Open</button>
+
+        <div x-show="open" x-transition:enter.duration.1000ms x-transition:leave.duration.2000ms class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+
+
+    </div>
+    <!-- lanjutin lg nanti : https://youtu.be/Abl7a47VJVM -->
+  </body>
+</html>
