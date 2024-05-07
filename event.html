@@ -14,21 +14,13 @@
   <div x-data="{pesan: 'Hello Baraya!'}" 
     class="container mx-auto w-3/4 text-center mt-10 bg-red-200 p-10 rounded-xl shadow">
 
-    <!-- <button @click="console.dir($event.target.classList.add('bg-red-500'))" id="btn-std" data-pesan="pesan dari btn-std"
-    class="py-2 px-5  text-white rounded-md bg-blue-500">Klik</button> -->
-
-
-    <button @click="ubahWarna" id="btn-std" data-pesan="pesan dari btn-std"
-    class="py-2 px-5  text-white rounded-md bg-blue-500">Klik saya</button>
-
-
+    <label for="nama" class="text-sm font-medium text-gray-900 block mb-2">Please input your name</label>
+    <input type="text" @keyup.enter="alert('kamu pencet enter yak?')" 
+    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <!-- see full reference here : https://alpinejs.dev/directives/on#keyboard-events -->
   </div>
-  
-  <script>
-    function ubahWarna(e) {
-      e.target.classList.add('bg-red-500');
-    }
-  </script>
+
+ 
 
   <!-- lanjutin lg nanti : https://youtu.be/Abl7a47VJVM?t=2587 -->
 </body>
