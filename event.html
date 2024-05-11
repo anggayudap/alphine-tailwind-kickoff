@@ -11,16 +11,19 @@
 
 <body>
 
-  <div x-data="{pesan: 'Hello Baraya!'}" 
+  <div x-data="{pesan: 'Hello Baraya!'}" @log="alert('data saved by '+$event.detail.nama+'!')"
     class="container mx-auto w-3/4 text-center mt-10 bg-red-200 p-10 rounded-xl shadow">
 
     <label for="nama" class="text-sm font-medium text-gray-900 block mb-2">Please input your name</label>
-    <input type="text" @keyup.enter="alert('kamu pencet enter yak?')" 
-    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <input type="text" @keyup.shift.enter="alert('kamu pencet enter yak?')"
+      class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
     <!-- see full reference here : https://alpinejs.dev/directives/on#keyboard-events -->
+
+    <button @click="$dispatch('log', {nama:'BAMBANG'})" class="py-2 px-5 text-white rounded-md bg-slate-500 mt-3">Klik
+      saya lagi</button>
   </div>
 
- 
+
 
   <!-- lanjutin lg nanti : https://youtu.be/Abl7a47VJVM?t=2587 -->
 </body>
